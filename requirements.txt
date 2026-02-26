@@ -1,0 +1,8 @@
+numpy
+matplotlib
+scipy
+
+scikit-learn
+
+psycopg2
+

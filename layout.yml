@@ -1,0 +1,425 @@
+types:
+- L0DL000150:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_62, k62_62]
+- L0DL200109:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L0DR100009:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L0DR300010:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_42, k62_62]
+- L1DL100109:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L1DL300110:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_42, k62_62]
+- L1DL500111:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42]
+- L1DR000051:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_62, k62_62]
+- L1DR200009:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L1DR400010:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_42, k62_62]
+- L1UL101009:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L1UL301010:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_42, k62_62]
+- L1UR001151:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_62, k62_62]
+- L1UR201109:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L2DL000153:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L2DL200112:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L2DL400113:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L2DR100012:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L2DR300012:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L2DR500014:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124]
+- L2UL001052:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_62, k62_62]
+- L2UL201028:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L2UL401029:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_42, k62_62]
+- L2UR101128:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_62, k62_62]
+- L2UR301129:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_22, k62_42, k62_42, k62_62]
+- L2UR501130:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42]
+- L3UL101012:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L3UL301012:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L3UL501014:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124]
+- L3UR001154:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L3UR201112:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L3UR401113:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L4DL100112:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L4DL300112:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L4DL500114:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124]
+- L4DR000054:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L4DR200012:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L4DR400013:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L4DR600015:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_62]
+- L5DL000161:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L5DL200116:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L5DL400117:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L5DL600119:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L5DR100016:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L5DR300017:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L5DR500018:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_124, k62_124]
+- L5UL001055:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L5UL201031:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L5UL401032:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124]
+- L5UL601034:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_62]
+- L5UR101131:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L5UR301131:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_42, k62_62, k62_124]
+- L5UR501133:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124]
+- L6DL100116:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L6DL300117:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L6DL500118:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_124, k62_124]
+- L6DR000056:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L6DR200016:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L6DR400017:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L6DR600019:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L6UL101016:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L6UL301017:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L6UL501018:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_124, k62_124]
+- L6UR001156:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L6UR201116:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L6UR401117:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L6UR601119:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L7DL000158:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L7DL200120:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L7DL400120:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L7DL600127:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L7DR100020:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L7DR300020:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L7DR500025:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_124, k62_124]
+- L7DR700021:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124]
+- L7UL001057:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L7UL201035:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L7UL401036:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L7UL601038:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L7UR101135:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L7UR301136:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L7UR501137:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_124, k62_124]
+- L8DL100122:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L8DL300122:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L8DL500123:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_62, k62_124, k62_124]
+- L8DL700126:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L8DR000060:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_124, k62_124, k62_124]
+- L8DR200022:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L8DR400022:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L8DR600024:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L8UL101039:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L8UL301039:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L8UL501040:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_62, k62_124, k62_124]
+- L8UL701041:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124]
+- L8UR001159:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_42, k62_62, k62_124, k62_124]
+- L8UR201139:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L8UR401139:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_22, k62_42, k62_124, k62_124, k62_124]
+- L8UR601126:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]
+- L9UL001060:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_124, k62_124, k62_124]
+- L9UL201022:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L9UL401022:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L9UL601024:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124]
+- L9UR101122:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L9UR301122:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_124, k62_124, k62_124]
+- L9UR501123:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_42, k62_62, k62_62, k62_124, k62_124]
+- L9UR701126:
+    length: 10
+    firstSensorOffsetY: 20
+    layout: [k62_124, k62_124]

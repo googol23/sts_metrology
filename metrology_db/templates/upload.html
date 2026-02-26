@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .message { margin-top: 20px; }
+        .success { color: green; }
+        .error { color: red; background-color: #ffe0e0; padding: 10px; margin: 10px 0; border-left: 4px solid red; }
+        .warning { color: orange; background-color: #fff3cd; padding: 10px; margin: 10px 0; border-left: 4px solid orange; }
+        .conflict { color: red; }
+        .overwrite-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .overwrite-btn:hover {
+            background-color: darkred;
+        }
+        ul { margin-top: 10px; }
+        li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+<h2>Upload ASCII Files</h2>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="files" multiple required>
+    <br><br>
+    <button type="submit">Upload</button>
+</form>
+
+<div class="message">
+    {% if errors %}
+        <div class="error">
+            <h3>Errors:</h3>
+            <ul>
+            {% for err in errors %}
+                <li>{{ err }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {% if message %}
+        <div class="success">
+            <h3>Result:</h3>
+            <ul>
+            {% for m in message %}
+                <li>{{ m }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {% if conflicts %}
+        <div class="warning">
+            <h3>Files already exist:</h3>
+            <ul>
+            {% for c in conflicts %}
+                <li>{{ c }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    
+        <form action="/overwrite" method="post">
+            <input type="hidden" name="session_id" value="{{ session_id }}">
+            <button class="overwrite-btn" type="submit">
+                Overwrite Existing Files
+            </button>
+        </form>
+    {% endif %}
+</div>
+
+<p><a href="/files">View uploaded files</a></p>
+
+</body>
+</html>

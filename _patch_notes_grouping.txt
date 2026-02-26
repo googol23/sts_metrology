@@ -1,0 +1,17 @@
+Patch notes for grouping implementation
+
+- Added helper: distance_point_to_rect_2d(px,py, rect_ll, w,h)
+  - returns distance in 2D between point and rectangle (0 if inside)
+
+- Added helper: assign_points_to_sensor_shapes(points, sensor_shapes)
+  - returns dict mapping sensor index -> list of points assigned
+
+- Replaced group_by_sensor body:
+  - builds sensor_shapes list using dbapi.STS_SENSOR_SIZE and dbapi.get_module_sensor
+  - places sensor centers sequentially along Y with optional overlap from dbapi.SENSOR_OVERLAP (if available)
+  - assigns marker and surface points to nearest sensor (XY-plane distance)
+  - returns mapping module_id -> (markers_array, surface_array)
+
+Notes:
+- This implementation assumes sensors are axis-aligned (no rotation). If sensor rotation is needed, the distance computation must be updated to use rotated coordinates.
+- Some ladder geometry constants are taken from dbapi when available; defaults are used otherwise.
