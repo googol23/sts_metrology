@@ -1,6 +1,8 @@
 import numpy as np
 from scipy.spatial.transform import Rotation
 
+from point3d import Point3D
+
 class SensorShape:
     """
     Rectangular shape in 3D, defined by a center and orientation.
@@ -23,12 +25,17 @@ class SensorShape:
         """
         return Rotation.from_euler('xyz', self.angles).as_matrix()
 
-    def distance_to_edge(self, point: tuple[float, float, float]) -> float:
+    def distance_to_edge(self, point: tuple[float, float, float] | Point3D) -> float:
         """
         Compute the true Euclidean distance from a 3D point to the nearest edge
         of this rectangle (lying in a plane defined by self.center, self.R, self.size).
         """
-        point = np.array(point, dtype=float)
+        
+        if isinstance(point, Point3D):
+            point = point.to_numpy()[:2]
+        else:    
+            point = np.array(point, dtype=float)
+        
         local = (point - self.center) @ self.R  # world → local
         px, py, pz = local
         hx, hy = self.size[0] / 2.0, self.size[1] / 2.0

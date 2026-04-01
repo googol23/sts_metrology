@@ -1,6 +1,8 @@
 from dataclasses import asdict, dataclass
-
+from functools import cached_property
 import numpy as np
+
+from sensor_shape import SensorShape
 
 
 @dataclass(frozen=True)
@@ -13,4 +15,9 @@ class SensorFit:
     """
 
     shape: SensorShape
-    residuals: list[Point3D]
+    param: tuple[float,...]
+    error: tuple[float,...]
+    
+    @cached_property
+    def n_par(self)->int:
+        return len(self.param)
