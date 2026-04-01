@@ -47,9 +47,9 @@ def estimate_initial_angles(points: np.ndarray):
     if np.linalg.det(axes) < 0:
         axes[:, -1] *= -1
 
-    # Convert rotation matrix to Euler angles
+    # Convert rotation matrix to Trait-Bryan
     rot = R.from_matrix(axes)
-    angles = rot.as_euler('xyz', degrees=False)
+    angles = rot.as_euler('zyx', degrees=False)
     return angles
 
 def make_callback(pts: np.ndarray, rect_size: tuple[float, float]):
@@ -60,7 +60,7 @@ def make_callback(pts: np.ndarray, rect_size: tuple[float, float]):
             logger.info("[minimize cb] iter %d cost=%.6e", last['iter'], cost_fn(xk, pts, rect_size))
     return cb
 
-def fit_sensor_measurements(pts:np.array, sensor_size:tuple[float,float], d_marker:float | None = 0.030)->SensorShape:
+def fit_sensor_measurements(pts:np.ndarray, sensor_size:tuple[float,float], d_marker:float = 0.030) -> SensorShape:
     rect_size = sensor_size[0] - d_marker, sensor_size[1] - d_marker
 
     # Initial guess: center at mean of points, no rotation
@@ -139,7 +139,7 @@ def visualize_optimization(shape: SensorShape, points: np.ndarray, fname: str):
     axes["YZ"].grid(True)
 
     # Residuals
-    residuals = np.array([(*p,optimized_shape.distance_to_edge(p)) for p in pts])
+    residuals = np.array([(*p,shape.distance_to_edge(p)) for p in points])
     axes["res_vs_x"].scatter(residuals[:,0], residuals[:,3], alpha=0.3, color='tab:blue', s=30)
     axes["res_vs_x"].set_ylabel('dr')
     axes["res_vs_x"].set_xlabel('X (mm)')
@@ -156,7 +156,65 @@ def visualize_optimization(shape: SensorShape, points: np.ndarray, fname: str):
     plt.savefig(fname)
     plt.close(fig)
 
-def draw_ladder_residuals(ladder_residual:np.array, fname:str | None = "ladder_residual") -> None:
+def draw_residual(self, A, X, sigmas=None):
+    """
+    Draw residual scatter plots for X, Y, Z axes in a single vertically stacked figure.
+
+    Parameters
+    ----------
+    A : np.ndarray
+        Observation matrix used in fit
+    X : np.ndarray
+        Estimated 6-DOF parameters
+    sigmas : np.ndarray or None
+        Standard deviations per axis [sigma_x, sigma_y, sigma_z].
+        If None or any sigma=0, plot raw residuals.
+    """
+
+    data = self.markers
+    N = data.shape[0]
+
+    # Nominal coordinates
+    P = data[:, 0:3]
+
+    # Observation vector
+    b = data[:, 3:6].reshape(-1)
+
+    # Residuals
+    r = b - A @ X
+    residuals = r.reshape(-1, 3)
+
+    # Standardize if sigmas provided and >0
+    if sigmas is not None and np.all(np.array(sigmas) > 0):
+        std_res = residuals / np.array(sigmas)
+        ylabel = ["Std Residual X", "Std Residual Y", "Std Residual Z"]
+        draw_lines = True
+    else:
+        std_res = residuals
+        ylabel = ["Residual X [m]", "Residual Y [m]", "Residual Z [m]"]
+        draw_lines = False
+
+    axes_labels = ['X', 'Y', 'Z']
+
+    # Create figure with 3 vertical subplots
+    fig, axs = plt.subplots(3, 1, figsize=(8, 10), sharex=False)
+
+    for i in range(3):
+        axs[i].scatter(P[:, i], std_res[:, i], color='blue', alpha=0.7)
+        axs[i].set_ylabel(ylabel[i])
+        axs[i].set_title(f"{ylabel[i]} vs Nominal {axes_labels[i]}")
+        axs[i].grid(True)
+        if draw_lines:
+            axs[i].axhline(0, color='k')
+            axs[i].axhline(3, color='r', linestyle='--')
+            axs[i].axhline(-3, color='r', linestyle='--')
+
+    axs[2].set_xlabel("Nominal coordinate")
+
+    plt.tight_layout()
+    fig.savefig
+    
+def draw_ladder_residuals(ladder_residual:np.ndarray, fname:str | None = "ladder_residual") -> None:
     fig =  plt.figure(figsize=(3*2, 3*4), layout='constrained')
     axes = fig.subplot_mosaic([
         ["res_vs_x", "res_vs_x"],
@@ -185,7 +243,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     logger = logging.getLogger(__name__)
 
-    from fetch_meas import fetch_ladders, fetch_measurements
+    from dev_test.fetch_meas import fetch_ladders, fetch_measurements
     import db_api as dbapi
 
     ladder_residual = np.empty((0,4))
